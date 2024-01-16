@@ -1,0 +1,33 @@
+@use "sass:color";
+
+@each $Colors, $Value in $Colors {
+    .text-#{$Colors} {
+        color: $Value;
+    }
+
+    .bg-#{$Colors} {
+        background-color: $Value;
+    }
+
+    @for $i from 1 through 9 {
+
+        .text-#{$Colors}-dark-#{$i} {
+            color: color.scale($Value, $lightness: -10% * $i);
+        }
+
+        .bg-#{$Colors}-dark-#{$i} {
+            background-color: color.scale($Value, $lightness: -10% * $i);
+        }
+
+        .text-#{$Colors}-light-#{$i} {
+            color: color.scale($Value, $lightness: 10% * $i);
+        }
+
+        .bg-#{$Colors}-light-#{$i} {
+            background-color: color.scale($Value, $lightness: 10% * $i);
+        }
+
+    }
+    
+}
+

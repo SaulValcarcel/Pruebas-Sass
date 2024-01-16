@@ -1,0 +1,34 @@
+@use "sass:color";
+@use "sass:map";
+
+$primary: #352d2d;
+$secondary: #e0e0e0;
+$Success: #339900;
+$Warning: #ffcc00;
+$Error: #cc3300;
+$Info: #00b7ff;
+
+$Colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "Success": $Success,
+    "Warning": $Warning,
+    "Error": $Error,
+    "Info": $Info
+);
+
+
+
+$Margin: 1rem;
+$Padding: 1rem;
+
+$Border-thickness: 0.1rem;
+$Border-radius: 0.5rem;
+
+$font-default: 1rem;
+$font-small: $font-default * 0.8;
+$font-large: $font-default * 1.2;
+
+
+
+

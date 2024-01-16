@@ -1,0 +1,22 @@
+@use "sass:color";
+
+@each $Colors, $Value in $Colors {
+    .btn-#{$Colors} {
+        @include border;
+        @include boton ($Value);
+        &:hover{
+            background-color: color.scale($Value, $lightness: 20%);
+        }
+    }
+
+    .btn-#{$Colors}-outlined {
+        @include border($Value);
+        @include boton (white);
+        &:hover{
+            background-color: color.scale(white, $lightness: -20%);
+        }
+    }
+
+    
+    
+}

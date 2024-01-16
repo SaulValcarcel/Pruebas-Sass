@@ -1,0 +1,105 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.caja{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.sucess {
+    background-color: $Success;
+    color: $secondary;
+    font-size: $font-default;
+    @include border($primary);
+    margin: $Margin;
+    padding: $Padding;
+}
+
+.error {
+    background-color: $Error;
+    color: $secondary;
+    font-size: $font-large;
+    @include border($primary);
+    margin: $Margin;
+    padding: $Padding;
+}
+
+.info {
+    background-color: $Info;
+    color: $secondary;
+    font-size: $font-small;
+    @include border($primary);
+    margin: $Margin;
+    padding: $Padding;
+}
+
+.warning {
+    background-color: $Warning;
+    color: $secondary;
+    font-size: $font-default;
+    @include border($primary);
+    margin: $Margin;
+    padding: $Padding;
+}
+
+.card{
+    margin: $Margin;
+    padding: $Padding;
+    cursor: default;
+    @include border($primary);
+    .card-title{
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .card-body{
+        a {
+            &:hover{
+                text-decoration: underline;
+            } 
+        }
+    }
+}
+
+.box{
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        background-color: $primary;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+       
+    }
+}
+
+.mareo{
+    margin: $Margin;
+    padding: $Padding;
+    @include border($primary);
+}
+
+.caja2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.porfuera{
+    display: flex;
+    justify-content: center;
+}
+
+.button-basic {
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-submit{
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+}

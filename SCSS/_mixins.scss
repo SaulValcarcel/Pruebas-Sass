@@ -1,0 +1,23 @@
+@mixin border ($color: $primary){
+    border: {
+        color: $color;
+        thickness: $Border-thickness;
+        radius: $Border-radius;
+        style: solid;
+    }
+}
+
+@mixin boton ($color: $primary) {
+    display: flex;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    justify-content: center;
+    border-radius: $Border-radius;
+    transition: all 0.5s linear;
+    text-decoration: none;
+    margin: $Margin;
+    background-color: $color;
+    font-weight: bold;
+    color: calcularcolortexto($color);
+}
